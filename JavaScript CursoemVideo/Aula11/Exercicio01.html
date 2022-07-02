@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Nacionalidade</title>
+</head>
+<body>
+    <p>Teste de Nacionalidade</p>
+    <input type="text" name="txtp" id="txtp">
+    <input type="button" value="ok" onclick="detectarnacionalidade()">
+    <div id="res"></div>
+    <script>
+        function detectarnacionalidade() {
+            var p = document.getElementById('txtp').value
+            var res = document.querySelector('div#res')
+            res.innerHTML = `O país digitado foi: ${p}`
+                if (p == 'Brasil' || p == 'brasil') {
+                    res.innerHTML += `<p>Você é Brasileiro.</p>`
+                } else {
+                    res.innerHTML += `<p>Você é Extrangeiro.</p>`
+                }
+        }
+    </script>
+</body>
+</html>
