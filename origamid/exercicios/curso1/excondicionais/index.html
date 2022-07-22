@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex Condicionais</title>
+</head>
+<body>
+   <button class="btnadc">Adicionar</button> 
+   <div id="tot">0</div>
+
+   <script>
+    const btnadc = document.querySelector(".btnadc");
+    let total = Number(document.querySelector("#tot").innerHTML);
+    console.log(total)
+
+    function somar() {
+        total = total + 1
+        if (total < 10) {
+            console.log(total)
+            document.querySelector("#tot").innerHTML = total
+        } else {
+            console.log("não é mais possivel adicionar o valor!")
+        }
+
+    }
+    if (btnadc) {
+        btnadc.addEventListener("click", somar);
+    }
+
+   </script>
+</body>
+</html>
